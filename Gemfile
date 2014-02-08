@@ -35,8 +35,10 @@ gem 'google-webfonts'
 # Redcarpet for markdown parser
 gem 'redcarpet'
 
-# Oauth via Facebook
+# Oauth via Facebook and everything (Had a bad concept, now I'm paying with a complete redesign)
 gem 'omniauth-facebook'
+gem 'omniauth-identity'
+gem 'omniauth'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

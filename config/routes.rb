@@ -1,11 +1,13 @@
 Cloudpad::Application.routes.draw do
-  get "log_in" => "sessions#new", :as => "log_in"
-  get "log_out" => "sessions#destroy", :as => "log_out"
+  match "log_in" => "sessions#new", as: "log_in", via: [:get]
+  match "log_out" => "sessions#destroy", as: "log_out", via: [:get, :post]
+  match "/auth/:provider/callback" => "sessions#create", via: [:get, :post]
+  match "/auth/failure", to: "sessions#failure", via: [:get, :post]
+  match "sign_up" => "identities#new", as: "sign_up", via: [:get]
   
-  get "sign_up" => "users#new", :as => "sign_up"
-  root :to => "users#new"
-  resources :users
-  resources :sessions
+  resources :identities
+  
+  root :to => "sessions#new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

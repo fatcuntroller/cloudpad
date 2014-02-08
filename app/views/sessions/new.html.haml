@@ -1,10 +1,10 @@
 %h1 Log in
 
-= form_tag sessions_path do
+= form_tag '/auth/identity/callback' do
   %p
-    = label_tag :email 
+    = label_tag :auth_key, "Email" 
     %br
-    = text_field_tag :email, params[:email]
+    = text_field_tag :auth_key
   %p
     = label_tag :password 
     %br

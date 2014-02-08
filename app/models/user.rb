@@ -1,9 +1,15 @@
 class User < ActiveRecord::Base
    
-  has_secure_password
+  def self.from_omniauth(auth)  
+    find_by(provider: auth["provider"],uid: auth["uid"]) || create_with_omniauth(auth)  
+  end  
   
-  before_save { self.email = email.downcase }
-  validates :email, presence: true, uniqueness: true, email: true #EmailValidator
-  validates :password, length: { minimum: 8 }
+  def self.create_with_omniauth(auth)  
+    create! do |user|  
+      user.provider = auth["provider"]  
+      user.uid = auth["uid"]  
+      user.name = auth["info"]["name"]  
+    end  
+  end  
   
 end
