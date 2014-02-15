@@ -10,7 +10,7 @@ gem 'rails', '4.0.0'
 #gem 'pure-sass'
 gem 'purecss-rails'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', :group => :development
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -41,6 +41,7 @@ gem 'redcarpet'
 # Oauth via Facebook and everything (Had a bad concept, now I'm paying with a complete redesign)
 gem 'omniauth-facebook'
 gem 'omniauth-identity'
+gem 'omniauth-github'
 gem 'omniauth'
 
 # Use jquery as the JavaScript library
