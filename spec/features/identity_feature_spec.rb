@@ -9,7 +9,7 @@ describe "User pages", :type => :feature do
     fill_in 'Name', :with => "Extreemnegro"
     fill_in 'Email', :with => "user@example.com"
     fill_in 'Password', :with => "p4ssw0rd"
-    fill_in 'Password confirmation', :with => "p4ssw0rd"
+    fill_in 'Password again', :with => "p4ssw0rd"
     click_button "Register"
     page.should have_content "Logged in!"
   end
@@ -18,7 +18,7 @@ describe "User pages", :type => :feature do
     visit '/log_in'
     fill_in 'Email', :with => user.email
     fill_in 'Password', :with => user.password
-    click_button "Save changes"
+    click_button "Log in"
     page.should have_content "Logged in!"
   end
   
@@ -26,7 +26,7 @@ describe "User pages", :type => :feature do
     visit '/log_in'
     fill_in 'Email', :with => user.email
     fill_in 'Password', :with => "wrongpassword"
-    click_button "Save changes"
+    click_button "Log in"
     page.should have_content "Authentication failed, please try again. Did you input correct password and email?"
   end
   

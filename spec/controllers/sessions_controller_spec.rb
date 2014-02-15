@@ -8,5 +8,12 @@ describe SessionsController do
       response.should be_success
     end
   end
+  
+  describe "GET 'destroy'" do
+    it "returns http success" do
+      get 'destroy'
+      response.should redirect_to(root_path)
+    end
+  end
 
 end

@@ -1,0 +1,21 @@
+!!! 5
+%html
+  %head
+  %title Cloudpad
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true 
+  = csrf_meta_tags
+	
+  %body
+    .pure-menu.pure-menu-open.pure-menu-horizontal
+      %a.pure-menu-heading{href: "#"} Cloudpad
+    
+      %ul
+        %li
+          %a{href: "#"} Dashboard
+        %li
+          %a{href: "#"} Signup
+    - flash.each do |name, msg|
+      = content_tag :div, msg, id: "flash#{name}"
+
+    = yield

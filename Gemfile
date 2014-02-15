@@ -4,8 +4,11 @@ ruby "2.0.0"
 gem 'rails', '4.0.0'
 
 # Use Unsemantic responsive grid system
-gem 'unsemantic_rails'
+#gem 'unsemantic_rails'
 
+# Use Pure CSS for rapid prototyping.
+#gem 'pure-sass'
+gem 'purecss-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -29,8 +32,8 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-# Google webfonts thanks to travishaynes' gem
-gem 'google-webfonts'
+# Google webfonts thanks to travishaynes' gem - THIS IS COMPLETELY USELESS
+#gem 'google-webfonts'
 
 # Redcarpet for markdown parser
 gem 'redcarpet'

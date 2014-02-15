@@ -1,9 +1,11 @@
 Cloudpad::Application.routes.draw do
+  get "users/dashboard"
   match "log_in" => "sessions#new", as: "log_in", via: [:get]
   match "log_out" => "sessions#destroy", as: "log_out", via: [:get, :post]
   match "/auth/:provider/callback" => "sessions#create", via: [:get, :post]
   match "/auth/failure", to: "sessions#failure", via: [:get, :post]
   match "sign_up" => "identities#new", as: "sign_up", via: [:get]
+  match "dashboard" => "users#dashboard", as: "dashboard", via: [:get, :post]
   
   resources :identities
   
