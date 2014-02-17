@@ -1,20 +1,19 @@
-.pure-g-r
-  = render 'layouts/logo'
-  .pure-u-1-3
-  .pure-u-1-3.form-center-input
-    = form_tag '/auth/facebook/callback', class: 'pure-form pure-form-stacked' do
-      %fieldset
-        %legend
-          Login with those OAuth services:
-        = button_tag "<span class='brandico-facebook'></span> Log in with Facebook".html_safe, class: 'button-facebook pure-button'
-    = form_tag '/auth/github/callback', class: 'pure-form pure-form-stacked' do
-      %fieldset
-        = button_tag "<span class='brandico-github'></span> Log in with Github".html_safe, class: 'pure-button content-center'
-    = form_tag '/auth/identity/callback', class: 'pure-form pure-form-stacked' do
-      %fieldset
-        %legend
-          Don't fancy OAuth?
-        = text_field_tag :auth_key, nil, placeholder: "Email"
-        = password_field_tag :password, nil, placeholder: "Password"
-        = submit_tag "Log in", class: 'pure-button pure-button-primary'
-  .pure-u-1-3
+= render 'layouts/logo'
+.pure-u-1-3
+.pure-u-1-3.form-center-input
+  = form_tag '/auth/facebook/callback', class: 'pure-form pure-form-stacked' do
+    %fieldset
+      %legend
+        Login with those OAuth services:
+      = button_tag "<span class='brandico-facebook'></span> Log in with Facebook".html_safe, class: 'button-facebook pure-button'
+  = form_tag '/auth/github/callback', class: 'pure-form pure-form-stacked' do
+    %fieldset
+      = button_tag "<span class='brandico-github'></span> Log in with Github".html_safe, class: 'pure-button content-center'
+  = form_tag '/auth/identity/callback', class: 'pure-form pure-form-stacked' do
+    %fieldset
+      %legend
+        Don't fancy OAuth?
+      = text_field_tag :auth_key, nil, placeholder: "Email"
+      = password_field_tag :password, nil, placeholder: "Password"
+      = submit_tag "Log in", class: 'pure-button pure-button-primary'
+.pure-u-1-3
