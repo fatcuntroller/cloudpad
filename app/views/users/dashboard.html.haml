@@ -1,2 +1,5 @@
-%h1 Users#dashboard
-%p Find me in app/views/users/dashboard.html.haml
+.pure-u-1-5
+  .notes-field
+    = link_to "<span class='entypo-feather'></span> Make a new note".html_safe, '#', class: 'pure-button pure-button-primary'
+    = render 'layouts/notelist'
+.pure-u-4-5

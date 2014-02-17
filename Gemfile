@@ -32,9 +32,6 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-# Google webfonts thanks to travishaynes' gem - THIS IS COMPLETELY USELESS
-#gem 'google-webfonts'
-
 # Redcarpet for markdown parser
 gem 'redcarpet'
 

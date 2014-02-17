@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-   
+  
+  has_many :notes, dependent: :destroy
+  
   def self.from_omniauth(auth)  
     find_by(provider: auth["provider"],uid: auth["uid"]) || create_with_omniauth(auth)  
   end  

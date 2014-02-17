@@ -7,15 +7,17 @@
   = csrf_meta_tags
 	
   %body
-    .pure-menu.pure-menu-open.pure-menu-horizontal
-      %a.pure-menu-heading{href: "#"} Cloudpad
+    .pure-menu.pure-menu-open.pure-menu-horizontal.h-menu
+      %a.pure-menu-heading{href: root_path} Cloudpad
     
       %ul
         %li
-          %a{href: "#"} Dashboard
+          %a{href: dashboard_path} Dashboard
         %li
-          %a{href: "#"} Signup
+          %a{href: sign_up_path} Signup
+    
     - flash.each do |name, msg|
       = content_tag :div, msg, id: "flash#{name}"
-
-    = yield
+    
+    .pure-g-r
+      = yield

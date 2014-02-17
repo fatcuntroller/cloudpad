@@ -1,0 +1,4 @@
+- @notes.each do |note|
+  = div_for(note, class: "foo") do 
+    = note.name
+    = note.content[0..29]
