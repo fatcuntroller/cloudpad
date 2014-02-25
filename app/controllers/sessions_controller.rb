@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.from_omniauth(env["omniauth.auth"])  
     session[:user_id] = @user.id  
-    redirect_to '/dashboard/', notice: "Logged in!"
+    redirect_to dashboard_root_url, notice: "Logged in!"
   end
   
   def destroy

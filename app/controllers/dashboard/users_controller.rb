@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Dashboard::UsersController < DashboardController
   def dashboard
     if session[:user_id]
       @user = User.find(session[:user_id])
