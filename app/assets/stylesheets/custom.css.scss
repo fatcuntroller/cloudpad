@@ -3,6 +3,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
+body, html, .pure-g-r{
+  height: 100%;
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+}
 body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
@@ -31,7 +39,10 @@ body,
   margin: 0 auto 0 auto !important;
   display: block !important;
 }
-
+.cur-user{
+  //position: relative;
+  float: right;
+}
 .logo-frame {
   background-image: image-url("cloud.png");
   background-repeat: no-repeat;
@@ -59,6 +70,11 @@ body,
   background: #77cebd !important;
 }
 
+.notes-grid{
+  height: 100%;
+  overflow-y: auto;
+}
+
 .notes-field{
   width: 85%;
   display: block;
@@ -68,4 +84,16 @@ body,
 .notes-field .pure-button{
   margin: 0 auto 0 auto;
   display: block;
+}
+
+.notes-list{
+  width: 100%;
+  display: block;
+  background: #77cebd;
+  margin: 0.25em auto 0.25em auto;
+  color: white;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }

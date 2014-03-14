@@ -1,4 +1,10 @@
-- @notes.each do |note|
-  = div_for(note, class: "foo") do 
-    = note.name
-    = note.content[0..29]
+.pure-u-1-5.notes-grid
+  .notes-field
+    = link_to "<span class='entypo-feather'></span> Make a new note".html_safe, '#', class: 'pure-button pure-button-primary'
+    - @user.notes.each do |note|
+      = link_to dashboard_note_path(note) do
+        = div_for(note, class: "notes-list") do 
+          %strong
+            = note.name
+          %br
+          = note.content[0..29] + "..."

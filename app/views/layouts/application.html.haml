@@ -8,14 +8,25 @@
 	
   %body
     .pure-menu.pure-menu-open.pure-menu-horizontal.h-menu
-      %a.pure-menu-heading{href: root_path} Cloudpad
-    
+      = link_to root_path, class: "pure-menu-heading" do
+        Cloudpad
       %ul
         %li
-          %a{href: dashboard_root_url} Dashboard
+          = link_to dashboard_root_path do
+            Dashboard
         %li
-          %a{href: sign_up_path} Signup
-    
+          = link_to sign_up_path do
+            Signup
+      - if current_user
+        %ul.cur-user
+          %li
+            = link_to log_out_path do
+              Logout
+          %li
+            = link_to dashboard_root_path do
+              Logged in as:
+              = current_user.name
+      
     - flash.each do |name, msg|
       = content_tag :div, msg, id: "flash#{name}"
     
