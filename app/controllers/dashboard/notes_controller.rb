@@ -14,7 +14,7 @@ class Dashboard::NotesController < DashboardController
   def create
     @note = @user.notes.build(note_params)
     @note.save
-    redirect_to @note
+    redirect_to dashboard_note_path(@note)
   end
   
   def edit
@@ -24,7 +24,7 @@ class Dashboard::NotesController < DashboardController
   def update
     @note = Note.find(params[:id])
     @note.update(note_params)
-    redirect_to @note
+    redirect_to dashboard_note_path(@note)
   end
   
   

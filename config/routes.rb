@@ -6,7 +6,7 @@ Cloudpad::Application.routes.draw do
   match "sign_up" => "identities#new", as: "sign_up", via: [:get]
   
   namespace :dashboard do
-    root to: "notes#index"
+    root to: "notes#new"
     resources :notes
   end
   

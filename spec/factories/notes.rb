@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :note do
-    name "MyString"
-    content "MyString"
+    name "Something"
+    content "Something lolzy"
     user_id 1
   end
 end

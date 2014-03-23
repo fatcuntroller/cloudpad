@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "User pages", :type => :feature do
-
   let(:user) { FactoryGirl.create(:identity) }
 
   it "allows user to register" do

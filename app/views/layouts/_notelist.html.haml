@@ -1,6 +1,6 @@
 .pure-u-1-5.notes-grid
   .notes-field
-    = link_to "<span class='entypo-feather'></span> Make a new note".html_safe, '#', class: 'pure-button pure-button-primary'
+    = link_to "<span class='entypo-feather'></span> Make a new note".html_safe, new_dashboard_note_path, class: 'pure-button pure-button-primary'
     - @user.notes.each do |note|
       = link_to dashboard_note_path(note) do
         = div_for(note, class: "notes-list") do 
