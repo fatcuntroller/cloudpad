@@ -43,9 +43,9 @@ class Dashboard::NotesController < DashboardController
       @note = Note.find(params[:id])
       if(@note.user_id != session[:user_id])
         redirect_to dashboard_notes_path
-        return true;
-      else
         return false;
+      else
+        return true;
       end
     end
     
