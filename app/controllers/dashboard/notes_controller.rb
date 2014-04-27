@@ -48,6 +48,7 @@ class Dashboard::NotesController < DashboardController
         return false;
       end
     end
+    
     def note_params
       params.require(:note).permit(:name, :content, :user_id)
     end
