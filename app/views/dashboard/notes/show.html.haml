@@ -1,4 +1,9 @@
 = render 'layouts/notelist'
 .pure-u-4-5
-  = @note.name
-  = @note.content
+  .note-body
+    %h1
+      = @note.name
+    = laytehcarpet(@note.content)
+    %br
+    = link_to 'Edit note', edit_dashboard_note_path(@note)
+    = link_to 'Delete note', dashboard_note_path(@note), method: :delete, confirm: "Are you sure?" 

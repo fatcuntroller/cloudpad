@@ -27,6 +27,11 @@ class Dashboard::NotesController < DashboardController
     redirect_to dashboard_note_path(@note)
   end
   
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to dashboard_notes_path
+  end
   
   private
   

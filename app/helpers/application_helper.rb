@@ -6,4 +6,9 @@ module ApplicationHelper
         @current_user ||= User.find(session[:user_id])
       end
     end
+    def laytehcarpet(text)
+      renderer = Redcarpet::Render::HTML.new(no_links: true, hard_wrap: true)
+      markdown = Redcarpet::Markdown.new(renderer, autolink: true, tables: true)
+      markdown.render(text).html_safe
+    end
 end

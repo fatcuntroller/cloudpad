@@ -97,3 +97,17 @@ body,
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
+
+.note-form{
+  width: 100%;
+  margin: 0.25em auto 0.25em auto;
+}
+.note-form input, .note-form textarea{
+  margin: 0.25em;
+  width: 95%;
+  padding: 0;
+  border-width: 2px;
+}
+.note-form textarea{
+  height: 300px;
+}
