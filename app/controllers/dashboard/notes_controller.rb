@@ -4,7 +4,7 @@ class Dashboard::NotesController < DashboardController
   end
   
   def show
-    if(user_permission)
+    user_permissions
     #@note = Note.find(params[:id])
   end
   
@@ -19,7 +19,7 @@ class Dashboard::NotesController < DashboardController
   end
   
   def edit
-    if(user_permission)
+    user_permissions
   end
   
   def update
