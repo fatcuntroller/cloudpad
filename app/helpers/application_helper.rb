@@ -7,7 +7,7 @@ module ApplicationHelper
       end
     end
     def laytehcarpet(text)
-      renderer = Redcarpet::Render::HTML.new(no_links: true, hard_wrap: true, filter_html: true)
+      renderer = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
       markdown = Redcarpet::Markdown.new(renderer, autolink: true, tables: true)
       markdown.render(text).html_safe
     end
